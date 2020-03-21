@@ -4,6 +4,7 @@
 @charset 'utf-8'
 
 $bg: white
+$bgdark: #ddd
 $color: #333
 $parafont: 'Sen', sans-serif
 $titlefont: $parafont
@@ -119,7 +120,7 @@ header.shrink
 
 // Navigation menu
 #nav-button
-    background: #333
+    background: $bg
     border: solid 20px #333
     display: none
     width: 90px
@@ -185,9 +186,9 @@ nav
         &:hover
             background: #444
     .active
-        background: #222
+        background: $bgdark
         &:hover
-            background: #222
+            background: $bgdark
         a
             color: #ddd
             cursor: default
@@ -221,7 +222,7 @@ nav
 
 main
     padding: 40px
-    background: #222
+    background: $bgdark
     line-height: 1.8
     margin-top: 80px
     h1
