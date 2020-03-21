@@ -1,0 +1,9 @@
+<footer>
+    <p>© {{ site.time | date: '%Y' }} {{ site.title }}.</p>
+</footer>
+<script src="/js/scripts.js"></script>
+{% if page.scripts %}
+    {% for script in page.scripts %}
+<script src="/js/{{ script }}.js"></script>
+    {% endfor %}
+{% endif %}
