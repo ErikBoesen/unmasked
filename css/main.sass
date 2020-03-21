@@ -69,8 +69,6 @@ header
     background: $bg
     box-shadow: 3px 3px 12px rgba(12, 12, 12, 0.5)
 
-    .title-simple
-        display: none
     #logo
         -webkit-transition: 0.2s
         transition: 0.2s
@@ -111,16 +109,6 @@ header.shrink
             left: -1.3em
     .title, h3
         display: none
-    .title-simple
-        display: inline
-        a
-            color: $color
-            text-decoration: none
-      h5
-          font-size: 50px
-          margin-left: -78px
-          vertical-align: middle
-          position: relative
     nav
         position: fixed
 
@@ -250,21 +238,6 @@ main
         display: block
         margin: 5px auto
 
-.img-row, table, .iframe-ext-wrapper
-    max-width: 10in
-    display: block
-    margin: 5px auto
-
-.img-row-2, table, .iframe-ext-wrapper
-    max-width: 10in
-    display: block
-    margin: 5px auto
-
-iframe
-    display: block
-    margin: 20px auto
-    border: 0
-
 td
     width: 30%
 
@@ -278,19 +251,6 @@ main > img, .img-row, table
 .img-row-2 img
     width: 47%
     margin: 1%
-
-.iframe-wrapper
-    position: relative
-    padding-bottom: 56.25%
-    // 16:9
-    padding-top: 25px
-    height: 0
-    iframe
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
 
 table img
     width: 100%
