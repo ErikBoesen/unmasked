@@ -12,13 +12,13 @@
     <meta property="og:title" content="{{ page.title | escape }}">
     <meta property="og:description" content="{{ page.description }}">
     <meta property="og:image" content="">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
     {% if page.stylesheets %}
         {% for stylesheet in page.stylesheets %}
-    <link rel="stylesheet" href="/css/{{ stylesheet }}.css">
+    <link rel="stylesheet" href="css/{{ stylesheet }}.css">
         {% endfor %}
     {% endif %}
 </head>
