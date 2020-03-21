@@ -1,0 +1,24 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% if page.title %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    <meta name="theme-color" content="#d12727">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    {% if page.stylesheets %}
+        {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="/css/{{ stylesheet }}.css">
+        {% endfor %}
+    {% endif %}
+</head>
