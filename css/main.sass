@@ -58,15 +58,9 @@ h1, h2, h3, h5, header, .jumbotron, .banners, footer table,
         z-index: 2000
 
 header
-    -webkit-transition: height 0.2s
-    transition: height 0.2s
-    position: fixed
-    top: 0
-    left: 0
-    z-index: 1000
-    height: 140px
+    height: 100px
     width: 100%
-    padding: 15px 15px 0
+    padding: 10px 10px 0
     background: $bg
     box-shadow: 3px 3px 12px rgba(12, 12, 12, 0.5)
 
@@ -78,7 +72,7 @@ header
             display: inline-block
             vertical-align: top
         a img
-            width: 180px
+            height: 70px
             margin-bottom: -2px
             cursor: pointer
     > a, h2 a, h3 a
@@ -90,33 +84,10 @@ header
         letter-spacing: 1px
 
 h2
-    font-size: 100px
+    font-size: 80px
     line-height: .85
-    margin-top: 5px
 h3
     font-size: 20px
-
-header.shrink
-    -webkit-transition: height 0.2s
-    transition: height 0.2s
-    height: 80px
-    position: fixed
-    #logo
-        transform: rotate(-90deg) scale(0.4)
-        -webkit-transition: 0.2s
-        transition: 0.2s
-        margin:
-            top: -2.3em
-            left: -1.3em
-    .title, h3
-        display: none
-    nav
-        position: fixed
-
-@media (min-width: 1200px)
-    header.shrink
-        nav
-            top: -17px
 
 // Navigation menu
 #nav-button
@@ -164,9 +135,8 @@ header.shrink
 nav
     display: inline
     position: absolute
-    margin-top: 40px
+    margin-top: 20px
     right: 10px
-    z-index: 100
     ul, li
         position: relative
     ul
@@ -206,11 +176,6 @@ nav
     > ul > li:last-child ul
         margin-left: -40px
 
-.button-container
-    display: flex
-    justify-content: center
-    width: 100%
-
 .button
     font-family: $titlefont
     padding: 12px 10px
@@ -221,88 +186,10 @@ nav
     color: $color
 
 main
-    padding: 40px
-    background: $bgdark
-    line-height: 1.8
-    margin-top: 80px
-    h1
-        font-size: 60px
-
-h5, p, blockquote
-    max-width: 10in
-    display: block
-    margin: 5px auto
-
-main
-    ul, > img
-        max-width: 10in
-        display: block
-        margin: 5px auto
-
-td
-    width: 30%
-
-main > img, .img-row, table
-    margin: 20px auto
-
-.img-row img
-    width: 31%
-    margin: 1%
-
-.img-row-2 img
-    width: 47%
-    margin: 1%
-
-table img
-    width: 100%
-
-main h1
-    text-align: center
-
-h5
-    margin-top: 30px
-    font-size: 30px
-
-blockquote
-    font-size: 25px
-    font-style: italic
-
-
-main
-    ul
-        padding-left: 20px
-    li
-        padding-left: 15px
-
-table
-    text-align: center
-
-tbody, tr
-    display: block
-    width: 100%
-    margin: 0 auto
-    max-width: 8in
-
-td
-    display: inline-block
-    width: 30%
-    vertical-align: top
-    ul, li
-        list-style-type: none
-        padding: 0
+    padding: 10px;
 
 footer
     text-align: center
-    color: #666
-    background: $bg
-    padding: 20px
-
-footer ul
-    line-height: 1.25
-
-.first-logo
-    width: 50px
-    margin-top: 10px
 
 @media (max-width: 1200px)
     #nav-button
@@ -409,19 +296,4 @@ footer ul
 @media (min-width: 756px) and (max-width: 850px)
     header
         padding-right: 90px
-
-@media (max-width: 585px)
-    tbody, tr
-        display: block
-        margin: 0 auto
-        width: 100%
-    td
-        display: block
-        width: 100%
-    nav
-        height: 100%
-
-@media (max-width: 450px)
-    header.shrink > .social
-        display: none
 
