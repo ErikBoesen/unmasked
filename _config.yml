@@ -18,6 +18,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   A repository of the stories of people affected by the COVID-19 virus.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+colors:
+  accent: #333
 
 # Build settings
 markdown: kramdown
