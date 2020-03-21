@@ -5,18 +5,18 @@
 
 $bg: white
 $bgdark: #ddd
-$color: #333
+$bglight: #eee
+$fg: #333
 $parafont: 'Sen', sans-serif
 $titlefont: $parafont
-$vaered: #d12727
-$lightvaered: #D94F4F
+$accent: #00356b
 $basicchars: U+0000-00FF
 
 @font-face
-  font-family: 'Sen'
-  font-style: normal
-  font-weight: 400
-  src: local('Sen Regular'), local('Sen-Regular'), url(https://fonts.gstatic.com/s/sen/v1/6xKjdSxYI9_3nPWNAGn5LA.woff2) format('woff2')
+    font-family: 'Sen'
+    font-style: normal
+    font-weight: 400
+    src: local('Sen Regular'), local('Sen-Regular'), url(https://fonts.gstatic.com/s/sen/v1/6xKjdSxYI9_3nPWNAGn5LA.woff2) format('woff2')
 
 *
     margin: 0
@@ -27,7 +27,7 @@ $basicchars: U+0000-00FF
 body
     font-family: $parafont
     font-weight: 100
-    color: $color
+    color: $fg
     background: $bg
     overflow-x: hidden
     line-height: 1
@@ -35,17 +35,17 @@ body
     -moz-osx-font-smoothing: grayscale
 
 ::-moz-selection
-    background-color: $vaered
+    background-color: $accent
 
 ::selection
-    background-color: $vaered
+    background-color: $accent
 
 a
     color: inherit
     &:hover
         text-decoration: none
 
-h1, h2, h3, h5, header, .jumbotron, .banners, footer table,
+h1, h2, h3, h5, header
     font-family: $titlefont
 
 #content-skip
@@ -58,12 +58,10 @@ h1, h2, h3, h5, header, .jumbotron, .banners, footer table,
         z-index: 2000
 
 header
-    height: 100px
     width: 100%
-    padding: 10px 10px 0
+    padding: 10px
     background: $bg
-    box-shadow: 3px 3px 12px rgba(12, 12, 12, 0.5)
-
+    box-shadow: 0 0 10px rgba(12, 12, 12, 0.1)
     #logo
         -webkit-transition: 0.2s
         transition: 0.2s
@@ -73,13 +71,11 @@ header
             vertical-align: top
         a img
             height: 70px
-            margin-bottom: -2px
             cursor: pointer
     > a, h2 a, h3 a
         text-decoration: none
     h3
         margin:
-            left: 25px
             top: 5px
         letter-spacing: 1px
 
@@ -92,7 +88,7 @@ h3
 // Navigation menu
 #nav-button
     background: $bg
-    border: solid 20px #333
+    border: solid 20px transparent
     display: none
     width: 90px
     height: 80px
@@ -109,7 +105,7 @@ h3
         position: absolute
         height: 2px
         width: 100%
-        background: $color
+        background: $fg
         opacity: 1
         left: 0
         transform: rotate(0)
@@ -135,7 +131,7 @@ h3
 nav
     display: inline
     position: absolute
-    margin-top: 20px
+    margin-top: 15px
     right: 10px
     ul, li
         position: relative
@@ -146,7 +142,7 @@ nav
     li > *
         text-decoration: none
         display: block
-        color: $color
+        color: $fg
         padding: 12px 15px
     span
         color: #ccc
@@ -154,11 +150,9 @@ nav
         float: left
         padding: 0
         &:hover
-            background: #444
-    .active
-        background: $bgdark
-        &:hover
             background: $bgdark
+    .active
+        background: $bglight
         a
             color: #ddd
             cursor: default
@@ -167,7 +161,7 @@ nav
             display: none
             position: absolute
             top: 100%
-            background: #2c2c2c
+            background: $bg
             padding: 0
             li
                 width: 100%
@@ -182,11 +176,11 @@ nav
     text-align: right
     margin: 20px
     text-decoration: none
-    background: $vaered
-    color: $color
+    background: $accent
+    color: $fg
 
 main
-    padding: 10px;
+    padding: 10px
 
 footer
     text-align: center
@@ -230,7 +224,7 @@ footer
             li
                 margin-left: 20px
                 padding-left: 10px
-                border-left: solid 4px $color
+                border-left: solid 4px $fg
         li:hover
             background: $bg
         li > *
@@ -247,7 +241,7 @@ footer
             &:hover
                 background: $bg
             a
-                color: $color
+                color: $fg
         a
             &:after
                 content: ''
@@ -255,7 +249,7 @@ footer
                 right: 100%
                 left: 0
                 bottom: 0
-                background: $color
+                background: $fg
                 height: 4px
                 -webkit-transition: .3s ease-out
                 transition: .3s ease-out
@@ -272,22 +266,8 @@ footer
             display: none
 
 @media (max-width: 850px)
-    header
-        position: static
-        padding-bottom: 20px
-        > img
-            display: block
-            z-index: 50
-        h2, h3
-            position: relative
-            line-height: 1
-            top: auto
-    .banners, h3
-        display: none
     h1
         line-height: 1.2
-    h2
-        margin-left: 10px
     nav li > *
         font-size: 30px
     .img-row img
